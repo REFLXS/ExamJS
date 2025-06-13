@@ -41,8 +41,8 @@ function arctang(x, n) {
         termErr += absVal[i] * gamma(2 + 4 * i); 
     } 
 
-    let sumError = absRes * gamma(6);       //Попарное суммирование ln2(64) = 6; 
-    let reprErr = xError + termErr;         //x + (-x^3/3 + x^5/5 -x^7/7)
+    let sumError = absRes * gamma(6);
+    let reprErr = xError + termErr;
 
     let absError = sumError + cuttingError + reprErr;
 
@@ -67,7 +67,6 @@ function calculatePi() {
 
     console.log("Вычисленное π:\n", PI.toFixed(40));
     console.log("Абсолютная ошибка:\n", PI_error);
-    console.log(u);
 };
 
 calculatePi();
