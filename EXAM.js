@@ -34,6 +34,7 @@ function arctang(x, n) {
     absVal.pop();
     const result = pairwiseSum(values);
     const absRes = pairwiseSum(absVal);
+
     let xError = x * u;
     let termErr = 0;
 
@@ -42,9 +43,9 @@ function arctang(x, n) {
     } 
 
     let sumError = absRes * gamma(6);
-    let reprErr = xError + termErr;
+    let represError = xError + termErr;
 
-    let absError = sumError + cuttingError + reprErr;
+    let absError = sumError + cuttingError + represError;
 
     return {
         value: result,
